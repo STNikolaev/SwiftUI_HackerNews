@@ -11,6 +11,10 @@
 		92232BCB27DF8AEE0012B0C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232BCA27DF8AEE0012B0C5 /* ContentView.swift */; };
 		92232BCD27DF8AF00012B0C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92232BCC27DF8AF00012B0C5 /* Assets.xcassets */; };
 		92232BD027DF8AF00012B0C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92232BCF27DF8AF00012B0C5 /* Preview Assets.xcassets */; };
+		92232BD827DF90FF0012B0C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232BD727DF90FF0012B0C5 /* NetworkManager.swift */; };
+		92232BDA27DF93A80012B0C5 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232BD927DF93A80012B0C5 /* PostData.swift */; };
+		92232BDD27E06D060012B0C5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232BDC27E06D060012B0C5 /* DetailView.swift */; };
+		92232BDF27E075A80012B0C5 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92232BDE27E075A80012B0C5 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,11 @@
 		92232BCA27DF8AEE0012B0C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92232BCC27DF8AF00012B0C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92232BCF27DF8AF00012B0C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92232BD727DF90FF0012B0C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		92232BD927DF93A80012B0C5 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		92232BDC27E06D060012B0C5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		92232BDE27E075A80012B0C5 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		92232BE027E079F50012B0C5 /* SwiftUI_HackerNews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_HackerNews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,10 @@
 		92232BC727DF8AEE0012B0C5 /* SwiftUI_HackerNews */ = {
 			isa = PBXGroup;
 			children = (
+				92232BE027E079F50012B0C5 /* SwiftUI_HackerNews.entitlements */,
 				92232BC827DF8AEE0012B0C5 /* SwiftUI_HackerNewsApp.swift */,
-				92232BCA27DF8AEE0012B0C5 /* ContentView.swift */,
+				92232BDB27E06CEA0012B0C5 /* Views */,
+				92232BD627DF90DF0012B0C5 /* Models */,
 				92232BCC27DF8AF00012B0C5 /* Assets.xcassets */,
 				92232BCE27DF8AF00012B0C5 /* Preview Content */,
 			);
@@ -65,6 +76,25 @@
 				92232BCF27DF8AF00012B0C5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92232BD627DF90DF0012B0C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				92232BD727DF90FF0012B0C5 /* NetworkManager.swift */,
+				92232BD927DF93A80012B0C5 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92232BDB27E06CEA0012B0C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92232BCA27DF8AEE0012B0C5 /* ContentView.swift */,
+				92232BDC27E06D060012B0C5 /* DetailView.swift */,
+				92232BDE27E075A80012B0C5 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92232BD827DF90FF0012B0C5 /* NetworkManager.swift in Sources */,
+				92232BDA27DF93A80012B0C5 /* PostData.swift in Sources */,
 				92232BCB27DF8AEE0012B0C5 /* ContentView.swift in Sources */,
+				92232BDF27E075A80012B0C5 /* WebView.swift in Sources */,
+				92232BDD27E06D060012B0C5 /* DetailView.swift in Sources */,
 				92232BC927DF8AEE0012B0C5 /* SwiftUI_HackerNewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +300,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_HackerNews/SwiftUI_HackerNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_HackerNews/Preview Content\"";
@@ -284,6 +319,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.yandex.fishkorn.SwiftUI-HackerNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,6 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwiftUI_HackerNews/SwiftUI_HackerNews.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI_HackerNews/Preview Content\"";
@@ -313,6 +350,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.yandex.fishkorn.SwiftUI-HackerNews";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
